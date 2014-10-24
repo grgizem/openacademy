@@ -15,6 +15,9 @@
 		"view/partner.xml",
 		"workflow/session_workflow.xml"
 	],
+	"update_xml": [
+		"security/groups.xml"
+		]
 	"demo": [],
 	"test": [],
 	"installable": True,
