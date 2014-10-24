@@ -19,9 +19,9 @@
 			<field name="arch" type="xml">
 				<form string="New Session Form" version="7.0">
 					<header>
-						<button name="action_draft" type="object" string="Reset to draft" states="confirmed,done" />
-						<button name="action_confirm" type="object" string="Confirm" states="draft" class="oe_highlight" />
-						<button name="action_done" type="object" string="Mark as done" states="confirmed" class="oe_highlight" />
+						<button name="signal_cancel" type="workflow" string="Reset to draft" states="confirmed,done" />
+						<button name="signal_confirm" type="workflow" string="Confirm" states="draft" class="oe_highlight" />
+						<button name="signal_done" type="workflow" string="Mark as done" states="confirmed" class="oe_highlight" />
 						<field name="state" widget="statusbar" />
 					</header>
 					<sheet>

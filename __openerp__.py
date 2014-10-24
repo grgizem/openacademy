@@ -12,7 +12,8 @@
 		"view/course.xml",
 		"view/session.xml",
 		"view/attendee.xml",
-		"view/partner.xml"
+		"view/partner.xml",
+		"workflow/session_workflow.xml"
 	],
 	"demo": [],
 	"test": [],
