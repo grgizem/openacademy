@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+		<record model="ir.ui.view" id="new_attendee">
+			<field name="name">New Attendee</field>
+			<field name="model">openacademy.attendee</field>
+			<field name="priority" eval="11" />
+			<field name="arch" type="xml">
+				<form string="New Attendee Form" version="7.0">
+					<sheet>
+						<group colspan="2">
+							<field name="partner_id" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="attendee_list">
+			<field name="name">Attendees</field>
+			<field name="model">openacademy.attendee</field>
+			<field name="priority" eval="11" />
+			<field name="arch" type="xml">
+				<tree string="Attendee List">
+					<field name="partner_id" />
+				</tree>
+			</field>
+		</record>
+
+	</data>
+</openerp>

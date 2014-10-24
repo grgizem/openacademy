@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+		<record model="ir.actions.act_window" id="action_list_courses">
+			<field name="name">Courses</field>
+			<field name="res_model">openacademy.course</field>
+			<field name="view_mode">tree,form,graph</field>
+			<field name="context">{'search_default_my_courses':1}</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Create your first course.
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="new_course">
+			<field name="name">New Course</field>
+			<field name="model">openacademy.course</field>
+			<field name="priority" eval="10" />
+			<field name="arch" type="xml">
+				<form string="New Course Form" version="7.0">
+					<sheet>
+						<h1><field name="name" placeholder="Title of the Course" /></h1>
+						<field name="responsible_id" />
+						<group colspan="2">
+							<field name="code" placeholder="Code of the Course" />
+							<field name="status" placeholder="Status of the Course" />
+						</group>
+
+						<notebook colspan="4">
+							<page string="Description">
+								<field name="description" nolabel="1"/>
+							</page>
+							<page string="Sessions">
+								<field name="session_ids" nolabel="1"/>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="course_list_view">
+			<field name="name">Courses</field>
+			<field name="model">openacademy.course</field>
+			<field name="priority" eval="10" />
+			<field name="arch" type="xml">
+				<tree string="Course List">
+					<field name="name"/>
+					<field name="responsible_id" />
+					<field name="code"/>
+					<field name="status"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="course_search_view">
+			<field name="name">Course Search</field>
+			<field name="model">openacademy.course</field>
+			<field name="arch" type="xml">
+				<search string="Session Search">
+					<filter string="My Courses" icon="terp-partner" name="my_courses" domain="[('responsible_id', '=', uid)]" help="My own sessions" />
+ 					<field name="name"/>
+ 				</search>
+ 			</field>
+ 		</record>
+
+ 		<record model="ir.ui.view" id="course_graph_view">
+			<field name="name">Course Graph</field>
+			<field name="model">openacademy.course</field>
+			<field name="arch" type="xml">
+				<graph string="Participations by Courses" type="bar">
+					<field name="name"/>
+					<field name="attendee_count" operator="+"/>
+				</graph>
+			</field>
+		</record>
+
+		<menuitem id="menu_courses" parent="openacademy_menu" name="Courses" sequence="9" action="action_list_courses" />
+	</data>
+</openerp>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+		<record model="ir.actions.act_window" id="action_list_sessions">
+			<field name="name">Sessions</field>
+			<field name="res_model">openacademy.session</field>
+			<field name="view_mode">tree,form,calendar,gantt,graph,kanban</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Create your first session.
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="new_session">
+			<field name="name">New Session</field>
+			<field name="model">openacademy.session</field>
+			<field name="priority" eval="11" />
+			<field name="arch" type="xml">
+				<form string="New Session Form" version="7.0">
+					<header>
+						<button name="action_draft" type="object" string="Reset to draft" states="confirmed,done" />
+						<button name="action_confirm" type="object" string="Confirm" states="draft" class="oe_highlight" />
+						<button name="action_done" type="object" string="Mark as done" states="confirmed" class="oe_highlight" />
+						<field name="state" widget="statusbar" />
+					</header>
+					<sheet>
+						<div class="oe_title">
+							<h1><field name="name" placeholder="Name of the Session" /></h1>
+							<field name="instructor_id" placeholder="Instructor of the Session" />
+						</div>
+						<group colspan="2">
+							<field name="start_date" placeholder="Start Date of the Session" />
+							<field name="duration" placeholder="Duration of the Session (in days)" />
+							<field name="seats" placeholder="Number of Seats" on_change="onchange_taken_seats(seats,attendee_ids)"/>
+						</group>
+						<notebook colspan="4">
+							<page string="Attendees">
+								<field name="attendee_ids" nolabel="1" on_change="onchange_taken_seats(seats,attendee_ids)"/>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="session_list_view">
+			<field name="name">Sessions</field>
+			<field name="model">openacademy.session</field>
+			<field name="priority" eval="11" />
+			<field name="arch" type="xml">
+				<tree string="Session List" colors="#0000ff:duration&lt;5;red:duration&gt;15">
+					<field name="name"/>
+					<field name="course_id" />
+					<field name="start_date"/>
+					<field name="duration"/>
+					<field name="seats"/>
+					<field name="taken_seats" widget="progressbar"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="session_calendar_view">
+			<field name="name">Session Calendar</field>
+			<field name="model">openacademy.session</field>
+			<field name="arch" type="xml">
+				<calendar string="Session Calendar" date_start="start_date" date_stop="end_date" color="instructor_id">
+					<field name="name"/>
+				</calendar>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="session_gantt_view">
+			<field name="name">Session Gantt</field>
+			<field name="model">openacademy.session</field>
+			<field name="arch" type="xml">
+				<gantt string="Session Gantt" color="course_id" date_start="start_date" date_delay="hours">
+					<level object="res.partner" link="instructor_id">
+						<field name="name"/>
+					</level>
+				</gantt>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="session_graph_view">
+			<field name="name">Session Graph</field>
+			<field name="model">openacademy.session</field>
+			<field name="arch" type="xml">
+				<graph string="Participations by Courses" type="bar">
+					<field name="course_id"/>
+					<field name="attendee_count" operator="+"/>
+				</graph>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_openacad_session_kanban">
+			<field name="name">Session Kanban</field>
+			<field name="model">openacademy.session</field>
+			<field name="arch" type="xml">
+				<kanban default_group_by="course_id">
+					<field name="color"/>
+					<templates>
+						<t t-name="kanban-box">
+							<div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)} oe_kanban_global_click_edit oe_semantic_html_override oe_kanban_card #{record.group_fancy==1 ? 'oe_kanban_card_fancy': ''}" >
+								<div class="oe_dropdown_kanban">
+									<div class="oe_dropdown_toggle">
+										<span class="oe_e">#</span>
+										<ul class="oe_dropdown_menu">
+											<li>
+												<a type="delete">Delete</a>
+											</li>
+											<li>
+												<ul class="oe_kanban_colorpicker" data-field="color"/>
+											</li>
+										</ul>
+									</div>
+									<div class="oe_clear"></div>
+								</div>
+								<div t-attf-class="oe_kanban_content">
+									Session name: <field name="name"/><br />
+									Start date: <field name="start_date"/><br />
+									Duration: <field name="duration"/>
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+		<menuitem id="menu_sessions" parent="openacademy_menu" name="Session" sequence="10" action="action_list_sessions" />
+	</data>
+</openerp>

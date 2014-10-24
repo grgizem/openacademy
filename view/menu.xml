@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+		<menuitem id="main_openacademy_menu" name="Open Academy"/>
+		<menuitem id="openacademy_menu" parent="main_openacademy_menu" name="Open Academy"/>
+	</data>
+</openerp>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+		<record model="ir.ui.view" id="new_partner">
+			<field name="name">partner.instructor</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form" />
+			<field name="priority" eval="11" />
+			<field name="arch" type="xml">
+				<field name="phone" position="before">
+					<label for="instructor" string="Instructor?"/>
+					<field name="instructor" nolabel="1"/>
+				</field>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="contact_list_action">
+			<field name="name">Contacts</field>
+			<field name="res_model">res.partner</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="group_list_action">
+			<field name="name">Groups</field>
+			<field name="res_model">res.partner.category</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="configuration_menu" name="Configuration" parent="main_openacademy_menu" />
+		<menuitem id="contact_menu" name="Contacts" parent="configuration_menu" action="contact_list_action" />
+		<menuitem id="group_menu" name="Groups" parent="configuration_menu" action="group_list_action" />
+
+	</data>
+</openerp>
