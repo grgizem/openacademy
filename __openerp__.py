@@ -13,7 +13,8 @@
 		"view/session.xml",
 		"view/attendee.xml",
 		"view/partner.xml",
-		"workflow/session_workflow.xml"
+		"workflow/session_workflow.xml",
+		"wizard/create_attendee_view.xml"
 	],
 	"update_xml": [
 		"security/groups.xml",
