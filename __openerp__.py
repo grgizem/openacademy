@@ -16,8 +16,9 @@
 		"workflow/session_workflow.xml"
 	],
 	"update_xml": [
-		"security/groups.xml"
-		]
+		"security/groups.xml",
+		"security/ir.model.access.csv"
+		],
 	"demo": [],
 	"test": [],
 	"installable": True,
