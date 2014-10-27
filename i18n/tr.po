@@ -1,0 +1,443 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* openacademy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20140804-231303\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-27 08:28+0000\n"
+"PO-Revision-Date: 2014-10-27 08:28+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: openacademy
+#: view:openacademy.session:0
+msgid "Start date:"
+msgstr "Başlangıç tarihi:"
+
+#. module: openacademy
+#: selection:openacademy.session,state:0
+msgid "Confirmed"
+msgstr "Onaylandı"
+
+#. module: openacademy
+#: view:openacademy.session:0
+#: field:openacademy.session,attendee_ids:0
+msgid "Attendees"
+msgstr "Katılımcılar"
+
+#. module: openacademy
+#: selection:openacademy.course,status:0
+msgid "Opened"
+msgstr "Açıldı"
+
+#. module: openacademy
+#: view:openacademy.course:0
+msgid "Course List"
+msgstr "Kurs Listesi"
+
+#. module: openacademy
+#: view:openacademy.session:0
+msgid "Confirm"
+msgstr "Onayla"
+
+#. module: openacademy
+#: model:ir.ui.menu,name:openacademy.main_openacademy_menu
+#: model:ir.ui.menu,name:openacademy.openacademy_menu
+msgid "Open Academy"
+msgstr "Open Academy"
+
+#. module: openacademy
+#: field:openacademy.course,responsible_id:0
+msgid "Responsible"
+msgstr "Sorumlu"
+
+#. module: openacademy
+#: view:openacademy.course:0
+msgid "Title of the Course"
+msgstr "Kursun Adı"
+
+#. module: openacademy
+#: view:openacademy.course:0
+msgid "New Course Form"
+msgstr "Yeni Kurs Formu"
+
+#. module: openacademy
+#: view:openacademy.session:0
+msgid "New Session Form"
+msgstr "Yeni Oturum Formu"
+
+#. module: openacademy
+#: view:openacademy.session:0
+msgid "Mark as done"
+msgstr "Tamamlandı"
+
+#. module: openacademy
+#: field:openacademy.session,end_date:0
+msgid "End Date"
+msgstr "Bitiş Tarihi"
+
+#. module: openacademy
+#: view:openacademy.session:0
+msgid "Reset to draft"
+msgstr "Taslak yap"
+
+#. module: openacademy
+#: selection:openacademy.session,state:0
+msgid "Draft"
+msgstr "Taslak"
+
+#. module: openacademy
+#: field:openacademy.course,attendee_count:0
+#: field:openacademy.session,attendee_count:0
+msgid "Attendee Count"
+msgstr "Katılımcı Sayısı"
+
+#. module: openacademy
+#: field:openacademy.course,name:0
+#: field:openacademy.session,name:0
+msgid "Title"
+msgstr "Ad"
+
+#. module: openacademy
+#: view:openacademy.create_attendee_wizard:0
+msgid "Add attendee"
+msgstr "Katılımcı ekle"
+
+#. module: openacademy
+#: view:openacademy.session:0
+msgid "Duration of the Session (in days)"
+msgstr "Oturum Süresi (gün olarak)"
+
+#. module: openacademy
+#: view:openacademy.attendee:0
+msgid "New Attendee Form"
+msgstr "Yeni Katılımcı Formu"
+
+#. module: openacademy
+#: selection:openacademy.course,status:0
+msgid "Not Opened"
+msgstr "Açılmadı"
+
+#. module: openacademy
+#: model:ir.actions.act_window,name:openacademy.create_attendee_wizard_action
+#: model:ir.actions.act_window,name:openacademy.session_create_attendee_wizard
+msgid "Add Attendees"
+msgstr "Katılımcı Ekle"
+
+#. module: openacademy
+#: field:openacademy.session,taken_seats:0
+msgid "Taken Seats Percent"
+msgstr "Doluluk Oranı"
+
+#. module: openacademy
+#: view:openacademy.course:0
+msgid "Code of the Course"
+msgstr "Kursun Kodu"
+
+#. module: openacademy
+#: view:openacademy.course:0
+#: field:openacademy.course,description:0
+msgid "Description"
+msgstr "Açıklama"
+
+#. module: openacademy
+#: constraint:openacademy.session:0
+msgid "The instructor can not be in an attendee list."
+msgstr "Eğitmen katılımcı listesinde yer alamaz."
+
+#. module: openacademy
+#: model:ir.actions.act_window,name:openacademy.action_list_sessions
+#: view:openacademy.course:0
+#: field:openacademy.course,session_ids:0
+msgid "Sessions"
+msgstr "Oturumlar"
+
+#. module: openacademy
+#: view:openacademy.session:0
+msgid "Session List"
+msgstr "Oturum Listesi"
+
+#. module: openacademy
+#: view:openacademy.session:0
+#: field:openacademy.session,seats:0
+msgid "Number of Seats"
+msgstr "Kapasite"
+
+#. module: openacademy
+#: model:ir.actions.act_window,name:openacademy.contact_list_action
+#: model:ir.ui.menu,name:openacademy.contact_menu
+msgid "Contacts"
+msgstr "Kişiler"
+
+#. module: openacademy
+#: model:ir.model,name:openacademy.model_openacademy_course
+msgid "openacademy.course"
+msgstr "openacademy.course"
+
+#. module: openacademy
+#: view:openacademy.attendee:0
+msgid "Attendee List"
+msgstr "Katlımcı Listesi"
+
+#. module: openacademy
+#: field:openacademy.session,hours:0
+msgid "Hours"
+msgstr "Saat"
+
+#. module: openacademy
+#: view:openacademy.session:0
+msgid "Instructor of the Session"
+msgstr "Oturum Eğitmeni"
+
+#. module: openacademy
+#: model:res.groups,name:openacademy.group_user
+msgid "User"
+msgstr "Kullanıcı"
+
+#. module: openacademy
+#: model:ir.actions.act_window,name:openacademy.group_list_action
+#: model:ir.ui.menu,name:openacademy.group_menu
+msgid "Groups"
+msgstr "Gruplar"
+
+#. module: openacademy
+#: field:openacademy.course,active:0
+#: field:openacademy.session,active:0
+msgid "Active"
+msgstr "Aktif"
+
+#. module: openacademy
+#: model:ir.ui.menu,name:openacademy.create_attendee_wizard_menu
+msgid "Add Attendee"
+msgstr "Katılımcı Ekle"
+
+#. module: openacademy
+#: view:openacademy.course:0
+msgid "My Courses"
+msgstr "Benim Kurslarım"
+
+#. module: openacademy
+#: model:ir.ui.menu,name:openacademy.configuration_menu
+msgid "Configuration"
+msgstr "Yapılandırma"
+
+#. module: openacademy
+#: view:openacademy.create_attendee_wizard:0
+msgid "Save Attendees"
+msgstr "Katılımcıları Kaydet"
+
+#. module: openacademy
+#: model:ir.module.category,name:openacademy.category_openacademy
+msgid "OpenAcademy"
+msgstr "OpenAcademy"
+
+#. module: openacademy
+#: model:ir.actions.act_window,help:openacademy.action_list_sessions
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"					Create your first session.\n"
+"				</p>\n"
+"			"
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"					İlk oturumu yarat.\n"
+"				</p>\n"
+"			"
+
+#. module: openacademy
+#: view:openacademy.course:0
+msgid "Session Search"
+msgstr "Oturum Arama"
+
+#. module: openacademy
+#: view:openacademy.session:0
+msgid "Session Gantt"
+msgstr "Oturum Gantt"
+
+#. module: openacademy
+#: field:openacademy.session,duration:0
+msgid "Duration"
+msgstr "Süre"
+
+#. module: openacademy
+#: view:openacademy.session:0
+msgid "Start Date of the Session"
+msgstr "Oturumun Başlangıç Tarihi"
+
+#. module: openacademy
+#: view:openacademy.session:0
+msgid "Name of the Session"
+msgstr "Oturumun Adı"
+
+#. module: openacademy
+#: model:ir.actions.act_window,name:openacademy.action_list_courses
+#: model:ir.ui.menu,name:openacademy.menu_courses
+msgid "Courses"
+msgstr "Kurslar"
+
+#. module: openacademy
+#: view:openacademy.session:0
+msgid "Duration:"
+msgstr "Süre:"
+
+#. module: openacademy
+#: field:openacademy.session,instructor_id:0
+#: field:res.partner,instructor:0
+msgid "Instructor"
+msgstr "Eğitmen"
+
+#. module: openacademy
+#: model:ir.model,name:openacademy.model_res_partner
+#: field:openacademy.attendee,partner_id:0
+msgid "Partner"
+msgstr "Kişi"
+
+#. module: openacademy
+#: view:openacademy.course:0
+msgid "Status of the Course"
+msgstr "Kursun Durumu"
+
+#. module: openacademy
+#: model:ir.model,name:openacademy.model_openacademy_attendee
+msgid "openacademy.attendee"
+msgstr "openacademy.attendee"
+
+#. module: openacademy
+#: model:ir.model,name:openacademy.model_openacademy_create_attendee_wizard
+msgid "openacademy.create_attendee_wizard"
+msgstr "openacademy.create_attendee_wizard"
+
+#. module: openacademy
+#: view:openacademy.session:0
+msgid "Delete"
+msgstr "Sil"
+
+#. module: openacademy
+#: model:ir.actions.act_window,help:openacademy.action_list_courses
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"					Create your first course.\n"
+"				</p>\n"
+"			"
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"					İlk kursu yarat.\n"
+"				</p>\n"
+"			"
+
+#. module: openacademy
+#: help:openacademy.course,code:0
+msgid "Course Code"
+msgstr "Kurs Kodu"
+
+#. module: openacademy
+#: field:openacademy.course,code:0
+msgid "Code"
+msgstr "Kod"
+
+#. module: openacademy
+#: field:openacademy.course,status:0
+msgid "Status"
+msgstr "Durum"
+
+#. module: openacademy
+#: model:ir.model,name:openacademy.model_openacademy_session
+msgid "openacademy.session"
+msgstr "openacademy.session"
+
+#. module: openacademy
+#: view:res.partner:0
+msgid "Instructor?"
+msgstr "Eğitmen?"
+
+#. module: openacademy
+#: field:openacademy.session,color:0
+msgid "Color"
+msgstr "Renk"
+
+#. module: openacademy
+#: view:openacademy.course:0
+msgid "My own sessions"
+msgstr "Benim oturumlarım"
+
+#. module: openacademy
+#: sql_constraint:openacademy.course:0
+msgid "Course name and description can not be same."
+msgstr "Kurs adı ve açıklaması aynı olamaz."
+
+#. module: openacademy
+#: sql_constraint:openacademy.course:0
+msgid "Course name should be unique."
+msgstr "Kurs adı zaten var."
+
+#. module: openacademy
+#: field:openacademy.session,state:0
+msgid "State"
+msgstr "Durum"
+
+#. module: openacademy
+#: sql_constraint:openacademy.attendee:0
+msgid "You can not add the same attendee multiple times."
+msgstr "Aynı katılımcıyı birden fazla ekleyemezsiniz."
+
+#. module: openacademy
+#: field:openacademy.session,course_id:0
+msgid "Course"
+msgstr "Kurs"
+
+#. module: openacademy
+#: model:res.groups,name:openacademy.group_manager
+msgid "Manager"
+msgstr "Yönetici"
+
+#. module: openacademy
+#: model:ir.ui.menu,name:openacademy.menu_sessions
+#: field:openacademy.attendee,session_id:0
+#: field:openacademy.create_attendee_wizard,session_id:0
+msgid "Session"
+msgstr "Oturum"
+
+#. module: openacademy
+#: selection:openacademy.session,state:0
+msgid "Done"
+msgstr "Tamam"
+
+#. module: openacademy
+#: field:openacademy.create_attendee_wizard,attendee_ids:0
+msgid "unknown"
+msgstr "unknown"
+
+#. module: openacademy
+#: view:openacademy.create_attendee_wizard:0
+msgid "Cancel"
+msgstr "Cancel"
+
+#. module: openacademy
+#: help:openacademy.session,duration:0
+msgid "Duration time in days"
+msgstr "Süre (gün)"
+
+#. module: openacademy
+#: field:openacademy.course,start_date:0
+#: field:openacademy.session,start_date:0
+msgid "Start Date"
+msgstr "Başlangıç Tarihi"
+
+#. module: openacademy
+#: view:openacademy.course:0
+#: view:openacademy.session:0
+msgid "Participations by Courses"
+msgstr "Kurs Katılımcıları"
+
+#. module: openacademy
+#: view:openacademy.session:0
+msgid "Session Calendar"
+msgstr "Oturum Takvimi"
+
+#. module: openacademy
+#: view:openacademy.session:0
+msgid "Session name:"
+msgstr "Oturum adı:"
+
