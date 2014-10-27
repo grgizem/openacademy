@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 7.0-20140804-231303\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-27 08:28+0000\n"
-"PO-Revision-Date: 2014-10-27 08:28+0000\n"
+"POT-Creation-Date: 2014-10-27 09:31+0000\n"
+"PO-Revision-Date: 2014-10-27 09:31+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -183,7 +183,7 @@ msgstr "openacademy.course"
 #. module: openacademy
 #: view:openacademy.attendee:0
 msgid "Attendee List"
-msgstr "Katlımcı Listesi"
+msgstr "Katılımcı Listesi"
 
 #. module: openacademy
 #: field:openacademy.session,hours:0
@@ -272,6 +272,12 @@ msgstr "Oturumun Başlangıç Tarihi"
 #: view:openacademy.session:0
 msgid "Name of the Session"
 msgstr "Oturumun Adı"
+
+#. module: openacademy
+#: code:addons/openacademy/session.py:48
+#, python-format
+msgid "You cannot have negative number of seats."
+msgstr "Yer sayısı negatif olamaz."
 
 #. module: openacademy
 #: model:ir.actions.act_window,name:openacademy.action_list_courses
@@ -412,7 +418,7 @@ msgstr "unknown"
 #. module: openacademy
 #: view:openacademy.create_attendee_wizard:0
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "İptal"
 
 #. module: openacademy
 #: help:openacademy.session,duration:0
@@ -430,6 +436,12 @@ msgstr "Başlangıç Tarihi"
 #: view:openacademy.session:0
 msgid "Participations by Courses"
 msgstr "Kurs Katılımcıları"
+
+#. module: openacademy
+#: code:addons/openacademy/session.py:51
+#, python-format
+msgid "You need more seats for this session."
+msgstr "Bu oturum için daha fazla yere ihtiyacınız var."
 
 #. module: openacademy
 #: view:openacademy.session:0

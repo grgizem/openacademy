@@ -1,3 +1,4 @@
+from tools.translate import _
 from datetime import datetime, timedelta
 
 from openerp.osv import osv, fields
@@ -44,10 +45,10 @@ class Session(osv.Model):
 		}
 		if seats < 0:
 			res['warning'] = {'title': "Warning!",
-							  'message': "You cannot have negative number of seats."}
+							  'message': _("You cannot have negative number of seats.")}
 		elif seats < len(attendee_records):
 			res['warning'] = {'title': "Warning!",
-							  'message': "You need more seats for this session."}
+							  'message': _("You need more seats for this session.")}
 		return res
 
 	def _determin_end_date(self, cr, uid, ids, field, arg, context=None):
