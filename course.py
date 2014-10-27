@@ -57,7 +57,7 @@ class Course(osv.Model):
 
 	_sql_constraints = [
 		('name_description_equality_check',
-		 'CHECK name <> description',
+		 'CHECK(name <> description)',
 		 'Course name and description can not be same.'),
 		('name_unique_check',
 		 'UNIQUE(name)',
