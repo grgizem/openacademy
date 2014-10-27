@@ -2,12 +2,31 @@
 <openerp>
 	<data>
 		<record model="ir.actions.act_window" id="create_attendee_wizard_action">
-			<field name="name">Add attendee</field>
+			<field name="name">Add Attendees</field>
 			<field name="res_model">openacademy.create_attendee_wizard</field>
 			<field name="view_type">form</field>
 			<field name="view_mode">form</field>
 			<field name="target">new</field>
 		</record>
+
+		<record model="ir.ui.view" id="new_attendee_wizard">
+			<field name="name">New Attendees</field>
+			<field name="model">openacademy.create_attendee_wizard</field>
+			<field name="type">form</field>
+			<field name="priority" eval="11" />
+			<field name="arch" type="xml">
+				<form string="Add attendee" version="7.0">
+					<group colspan="2">
+						<field name="session_id" colspan="2"/>
+					</group>
+					<field name="attendee_ids" nolabel="1" colspan="4">
+					</field>
+					<button type="special" special="cancel" string="Cancel" icon="gtk-cancel"/>
+					<button type="object" name="action_add_attendees" string="Save Attendees" icon="gtk-ok"/>
+				</form>
+			</field>
+		</record>
+
 		<menuitem name="Add Attendee" parent="openacademy_menu" id="create_attendee_wizard_menu" action="create_attendee_wizard_action"/>
 	</data>
 </openerp>

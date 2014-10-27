@@ -4,4 +4,12 @@ from osv import osv, fields
 class CreateAttendeeWizard(osv.TransientModel):
 	_name = 'openacademy.create_attendee_wizard'
 	_columns = {'session_id': fields.many2one('openacademy.session', "Session", required=True),
-	            'attendee_id': fields.many2one('res.partner', "Attendees", required=True, domain=[('instructor', '=', False)])}
+	            'attendee_ids': fields.many2many('res.partner', required=True, domain=[('instructor', '=', False)])}
+
+	def action_add_attendees(self, cr, uid, ids, context=None):
+		attendee_model = self.pool.get('openacademy.attendee')
+		wizard = self.browse(cr, uid, ids[0], context=context)
+		for attendee in wizard.attendee_ids:
+			attendee_model.create(cr, uid, {'partner_id': attendee.id,
+											'session_id': wizard.session_id.id,})
+		return {}
